@@ -1,0 +1,737 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  font-family: 'Merriweather', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(59, 22, 22);
+}
+
+#wrapper {
+  background-color: rgba(154, 59, 59, 1);
+  width: 96%;
+  margin: 3rem auto;
+  max-width: 140rem;
+  box-shadow: 1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.2);
+}
+
+/*  ========================================================
+    TYPOGRAPHY
+    ======================================================== */
+
+h1 {
+  font-family: 'Satisfy', cursive;
+  font-weight: 400;
+  font-size: 7rem;
+  letter-spacing: normal;
+  margin: 0;
+  color: rgb(242, 236, 190);
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 1)
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: rgba(154, 59, 59, 1);
+  margin: 0;
+  padding: 2.4rem 1.2rem 0 1.2rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 1.2rem 1.2rem 0 1.2rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+ul {
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+  align-self: center;
+}
+
+li {
+  display: inline;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  padding: 0 1.2rem;
+}
+
+.heroLine {
+  height: 0.5rem;
+  background: linear-gradient(90deg, rgba(226, 199, 153, 1) 0%, rgba(207, 145, 100, 1) 64%, rgba(154, 59, 59, 1) 91%);
+  margin-bottom: 2.8rem;
+}
+
+p {
+  color: rgb(242, 236, 190);
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+
+.myCard p {
+  padding-left: 1.2rem;
+  padding-right: 1rem;
+  color: rgba(154, 59, 59, 1)
+}
+
+.dayTitle {
+  color: rgba(255, 255, 255, 1);
+}
+
+.pBold {
+  font-weight: 700;
+}
+
+.modalTitle {
+  padding-left: 0;
+  line-height: 3.5rem;
+}
+
+.modalTitleLight {
+  font-weight: 300;
+  color: rgba(0, 0, 0, 1);
+}
+
+.modalTitleRed {
+  color: rgba(78, 10, 6, 0.8);
+}
+
+.dayNo {
+  color: rgba(0, 0, 0, 0.8)
+}
+
+.modalDialog>div>p {
+  color: rgba(0, 0, 0, 1)
+}
+
+footer h3,
+footer h4 {
+  color: rgb(242, 236, 190);
+  padding: 0;
+}
+
+footer h3 {
+  font-size: 2rem;
+}
+
+footer h4 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#confDescFooter {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 400;
+}
+
+#confNameFooter {
+  font-family: 'Satisfy', cursive;
+  letter-spacing: 0.1rem;
+}
+
+#hotelDesc {
+  font-style: italic;
+  padding: 3rem;
+}
+
+.contactBody>p {
+  color: rgba(154, 59, 59, 1);
+  ;
+}
+
+#faqModal>h1 {
+  margin: 1rem;
+}
+
+#faqModal {
+  font-size: 1.5rem;
+}
+
+.dropdown-content>p {
+  font-size: 1rem;
+}
+
+/*  ========================================================
+    LAYOUT
+    ======================================================== */
+header {
+  width: 100%;
+  background-image: url('img/heroImg.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 78rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.heroColumn:nth-child(1) {
+  margin: auto;
+}
+
+.heroTextBox {
+  margin-left: 10rem;
+}
+
+.cardLayout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  width: 98%;
+  margin: 2rem auto;
+}
+
+.myCard {
+  background-color: rgba(226, 199, 153, 1);
+  box-shadow: 0.8rem 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.4rem;
+}
+
+.myCard img {
+  width: 100%;
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+
+.cardBar {
+  width: 100%;
+  height: 8rem;
+  background-color: rgba(192, 130, 97, 0.8);
+  display: flex;
+  margin-top: auto;
+  border-radius: 0 0 0.4rem 0.4rem;
+}
+
+.breakSection {
+  background-image: url('img/next_event_edited.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 78rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.sectionTextBox {
+  margin: 8rem auto 0 auto;
+  max-width: 100%;
+}
+
+#nextAnchor {
+  padding-left: 0;
+  display: inline;
+  color: rgb(242, 236, 190);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 65%,
+      rgb(104, 40, 40) 65%);
+}
+
+.timeTable {
+  background-image: url("img/schedule-bg.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 2rem auto;
+}
+
+.day {
+  background-color: rgba(226, 199, 153, 1);
+  box-shadow: 0.8rem 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+
+#dayZero {
+  opacity: 0;
+}
+
+#dayFirst {
+  height: 55%;
+}
+
+#daySecond {
+  height: 96%;
+}
+
+#dayThird {
+  height: 87%;
+  margin-right: 1.5rem;
+}
+
+.dayBar {
+  background-image: url("img/day-bg.png");
+  background-size: cover;
+  background-position: center;
+  height: 8rem;
+  border-radius: 0.4rem;
+}
+
+.day p {
+
+  padding-right: 1rem;
+  color: rgba(154, 59, 59, 1);
+}
+
+.dayLine {
+  height: 0.8rem;
+  width: 60%;
+  background: rgb(192, 130, 97);
+  background: linear-gradient(90deg, rgba(192, 130, 97, 1) 41%, rgba(226, 199, 153, 0) 100%);
+}
+
+.modalDialog {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modalDialog:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modalDialog>div {
+  background-color: rgba(226, 199, 153, 1);
+  width: 61.2%;
+  margin: 10% auto;
+  border-radius: 0.6rem;
+  padding: 3rem 6rem;
+  position: relative;
+}
+
+textarea {
+  display: block;
+  outline: none;
+  border: none;
+  resize: none;
+  background-color: rgba(0, 0, 0, 0.25);
+  width: 100%;
+  margin: 1.5rem auto;
+  font-family: 'Merriweather', sans-serif;
+  height: 3rem;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  color: rgb(236, 229, 218);
+  padding-left: 1rem;
+}
+
+textarea::placeholder {
+  color: rgb(236, 229, 218);
+}
+
+.myDivider {
+  height: 3rem;
+}
+
+.contactSection {
+  background-color: rgba(226, 199, 153, 1);
+  box-shadow: 0.8rem 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 'one one two';
+  gap: 3rem;
+  padding: 1rem;
+  width: 96%;
+  margin: 2rem auto;
+}
+
+.contactComponent:nth-child(1) {
+  grid-area: one;
+}
+
+.contactComponent:nth-child(2) {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-area: two;
+  margin-right: 1rem;
+}
+
+.contactBody {
+  padding: 2rem;
+}
+
+.contactComponent:nth-child(1) img {
+  width: 100%;
+  border-radius: 0.4rem;
+}
+
+.buttonGroup {
+  width: 100%;
+  display: flex;
+  margin-top: 0;
+  border-radius: 0 0 0.4rem 0.4rem;
+}
+
+footer {
+  background-color: rgba(192, 130, 97, 1);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.footerColumn {
+  padding: 4rem 3rem;
+}
+
+.footerLine {
+  height: 0.2rem;
+  background-color: rgba(154, 59, 59, 0.8);
+  margin: 0.1rem 0 0.8rem 0;
+}
+
+footer img {
+  width: 100%;
+}
+
+.collapsible-accordion {
+  margin: 0.5rem;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  box-shadow: 0 0.2rem 0.2rem -0.1rem rgba(0, 0, 0, 0.5);
+}
+
+.collapsible-item-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(154, 59, 59, 0.8);
+  color: #fff;
+}
+
+.collapsible-item-label::after {
+
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  transition: all 0.35s;
+}
+
+.collapsible-item-content {
+  max-height: 0;
+  padding: 0 1em;
+  background: white;
+  transition: all 0.35s;
+}
+
+input:checked+.collapsible-item-label::after {
+  transform: rotate(90deg);
+}
+
+input:checked~.collapsible-item-content {
+  max-height: 100vh;
+  padding: 1rem;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  pointer-events: none;
+  opacity: 0;
+  position: absolute;
+  background-color: rgba(154, 59, 59, 0.8);
+  min-width: 22rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+  padding-left: 0.5rem;
+  border-radius: 0 0.4rem 0.4rem 0.4rem;
+  z-index: 1;
+  transform: translateY(-10%);
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  display: block;
+  pointer-events: auto;
+  transition: transform 0.5s;
+  transform: translateY(0);
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 0.3rem 0.3rem;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(80, 60, 49)
+}
+
+/*  ========================================================
+    LINKS, NAVIGATION, BUTTONS...
+    ======================================================== */
+nav {
+  background-color: rgba(192, 130, 97, 0.8);
+  height: 4.2rem;
+  box-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  display: flex;
+}
+
+nav a {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+}
+
+.myButton {
+  display: block;
+  font-size: 1.4rem;
+  color: rgba(116, 78, 58, 0.8);
+  background-color: rgb(242, 236, 190);
+  font-weight: 700;
+  padding: 1.5rem 2.2rem;
+  margin-top: 2rem;
+  width: fit-content;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  touch-action: manipulation;
+  border-radius: 0.4rem;
+  transition: all ease 1s;
+  box-shadow: rgba(192, 130, 97, 1) 0.4rem 0.4rem 0 0;
+}
+
+.myButton:hover {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: rgb(43, 37, 34) 0.4rem 0.4rem 0 0;
+  translate: 0.3rem 0.3rem;
+  color: rgba(154, 59, 59, 1);
+}
+
+.cardButton {
+  background-color: rgba(154, 59, 59, 1);
+  color: rgb(242, 236, 190);
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 1.8rem 2.5rem;
+  border-radius: 0.4rem;
+  box-shadow: -0.4rem 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  margin: auto;
+  transition: all ease 1.5s;
+}
+
+.cardButton:hover {
+  color: rgba(255, 255, 255, 1);
+  transform: translateY(-1rem);
+  box-shadow: -0.4rem 0.4rem 0.8rem rgba(0, 0, 0, 0);
+  background-color: rgba(102, 36, 0, 0.8);
+}
+
+.closeButton {
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: rgba(154, 59, 59, 1);
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  width: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  border-radius: 1rem;
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
+}
+
+.closeButton:hover {
+  box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
+  transform: rotate(0deg);
+  color: rgba(154, 59, 59, 1);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.breakSection .myButton {
+  color: rgb(104, 40, 40);
+  background-color: rgb(242, 236, 190);
+  box-shadow: rgb(104, 40, 40) 0.4rem 0.4rem 0 0;
+}
+
+.breakSection .myButton:hover {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: rgb(43, 37, 34) 0.4rem 0.4rem 0 0;
+  translate: 0.3rem 0.3rem;
+  color: rgba(154, 59, 59, 1);
+}
+
+.modalDialog .myButton {
+  color: rgba(154, 59, 59, 1);
+  box-shadow: rgba(154, 59, 59, 1) 0.4rem 0.4rem 0 0;
+}
+
+.buttonGroup .cardButton {
+  max-height: 1.5rem;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
+
+footer a {
+  display: block;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 0.3rem 0;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+
+footer span {
+  display: block;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 0.3rem 0;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+
+
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+/*  ========================================================
+    RESPONSIVE ELEMENTS
+    ======================================================== */
+
+@media (max-width: 1024px) {
+  header {
+    background-image: url('img/heroImg-plain.png');
+  }
+
+  h3 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .cardLayout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contactSection {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: 'one' 'two';
+  }
+
+  .timeTable {
+    grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+  }
+
+  .contactComponent:nth-child(2) {
+    margin-left: 4rem;
+  }
+
+  #dayFirst {
+    height: auto;
+  }
+
+  #daySecond {
+    height: auto;
+  }
+
+  #dayThird {
+    height: auto;
+    margin-right: 0;
+  }
+
+  .breakSection {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .cardLayout {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .heroTextBox {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .cardLayout {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .breakSection {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .breakComponent:nth-child(1),
+  .breakComponent:nth-child(2) {
+    display: none;
+  }
+
+  .breakComponent:nth-child(3) {
+
+    width: 76%;
+    margin: auto;
+    padding: 0 10% 4rem 10%;
+    border-radius: 0.4rem;
+  }
+
+  .timeTable {
+    grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+  }
+
+  #dayFirst {
+    height: auto;
+  }
+
+  #daySecond {
+    height: auto;
+  }
+
+  #dayThird {
+    height: auto;
+  }
+
+  footer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footerColumn:nth-child(2),
+  .footerColumn:nth-child(3),
+  .footerColumn:nth-child(4) {
+    padding-top: 0;
+  }
+}
